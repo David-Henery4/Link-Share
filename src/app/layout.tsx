@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-// import {Instrument_Sans} from "next/font/google"
 import { instrumentSans } from "./fonts/fonts";
 import "./globals.css";
 

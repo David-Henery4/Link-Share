@@ -10,12 +10,18 @@ const config: Config = {
     fontFamily: {
       instrumentSans: ["var(--font-instrument-sans)", "sans-serif"],
     },
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+    colors: {
+      purple: "#633CFF",
+      purpleLight: "#EFEBFF",
+      purpleHover: "#BEADFF",
+      darkGrey: "#333333",
+      grey: "#737373",
+      lightGrey: "#FAFAFA",
+      border: "#D9D9D9",
+      white: "#ffffff",
+      red: "#FF3939", 
     },
+    extend: {},
   },
   plugins: [],
 };
