@@ -4,7 +4,7 @@ import { ButtonHTMLAttributes } from "react";
 
 interface ButtonTypes extends ButtonHTMLAttributes<HTMLButtonElement> {
   buttonType: "primary" | "secondary";
-  size?: "large";   
+  size?: "large" | "secondarySmall";
 }
 
 const Button = ({ buttonType, size, className, ...props }: ButtonTypes) => {
@@ -26,6 +26,7 @@ const buttonVariants = cva(
       },
       size: {
         large: "w-full",
+        secondarySmall: "px-4 py-3",
       },
     },
   }
