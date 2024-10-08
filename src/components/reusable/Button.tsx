@@ -17,7 +17,7 @@ const Button = ({ buttonType, size, className, ...props }: ButtonTypes) => {
 };
 
 const buttonVariants = cva(
-  "rounded-lg text-center disabled:opacity-25 py-3 px-7",
+  "rounded-lg text-center py-3 px-7 text-base font-semibold disabled:opacity-25",
   {
     variants: {
       buttonType: {

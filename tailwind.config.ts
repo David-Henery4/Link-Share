@@ -7,6 +7,10 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      lgMob: "29.6875em", // 475px
+      tablet: "46.25em", // 740px
+    },
     fontFamily: {
       instrumentSans: ["var(--font-instrument-sans)", "sans-serif"],
     },
@@ -19,7 +23,7 @@ const config: Config = {
       lightGrey: "#FAFAFA",
       border: "#D9D9D9",
       white: "#ffffff",
-      red: "#FF3939", 
+      red: "#FF3939",
     },
     extend: {},
   },

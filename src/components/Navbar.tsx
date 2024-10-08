@@ -1,6 +1,6 @@
 import { NavLogo, Tab } from "./nav-comps";
 import Button from "./reusable/Button";
-import { LinksTabIcon, PreviewEyeIcon, ProfileDetailsHeaderIcon } from "./icons";
+import { LinksTabIcon, PreviewEyeIcon, ProfileDetailsHeaderIcon, LogoLarge, LogoSmall } from "./icons";
 
 
 const Navbar = () => {

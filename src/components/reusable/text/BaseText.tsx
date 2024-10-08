@@ -10,7 +10,7 @@ const BaseText = ({ size, className, ...props }: BaseTextTypes) => {
   return <p className={cn(baseTextVariants({ size }), className)} {...props} />;
 };
 
-const baseTextVariants = cva("font-normal text-darkGrey", {
+const baseTextVariants = cva("font-normal text-grey", {
   variants: {
     size: {
       medium: "text-base",

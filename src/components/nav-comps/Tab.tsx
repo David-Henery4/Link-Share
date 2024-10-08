@@ -13,7 +13,7 @@ const Tab = ({ label, isActive, children }: TabTypes) => {
         isActive ? "bg-purpleLight text-purple" : "text-grey"
       }`}
     >
-      <span className="capitalize hidden group-hover:text-purple">{label}</span>
+      <span className="capitalize hidden group-hover:text-purple lgMob:block">{label}</span>
       <span>{children}</span>
     </button>
   );

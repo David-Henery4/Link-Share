@@ -1,4 +1,4 @@
-
+import { LogoLarge, LogoSmall } from "../icons";
 
 const NavLogo = () => {
   return (

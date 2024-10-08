@@ -10,6 +10,7 @@ const Heading = ({ size, className, ...props }: HeadingTypes) => {
   return <h1 className={cn(headingVariants({ size }), className)} {...props} />;
 };
 
+// MIGHT NOT EVEN NEED!!!!!!!!!!
 const headingVariants = cva("font-bold text-darkGrey", {
   variants: {
     size: {
