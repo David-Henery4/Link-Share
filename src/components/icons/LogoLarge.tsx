@@ -4,10 +4,11 @@ const LogoLarge = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="183"
-      height="40"
+      // width="183"
+      // height="40"
       fill="none"
       viewBox="0 0 183 40"
+      className="hidden w-[146px] tablet:block"
     >
       <path
         fill="#633CFF"

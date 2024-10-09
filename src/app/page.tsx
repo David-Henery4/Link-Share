@@ -11,12 +11,12 @@ export default function Home() {
     <div className="w-full min-h-[100svh]">
       <Navbar />
       <main className="w-full p-4 lgMob:p-6">
-        <div className="w-full p-6 lgMob:p-10 bg-white">
+        <div className="w-full rounded-xl bg-white">
           <LinksSection />
           {/* <ProfileSection/> */}
-          <div className="w-full tablet:flex tablet:justify-end">
+          <div className="w-full border-t border-border p-4 lgMob:py-6 lgMob:px-10 tablet:flex tablet:justify-end">
             <Button
-              disabled={true}
+              disabled={true} // temp obvs
               buttonType="primary"
               size="large"
               className="tablet:w-auto target:ml-auto"

@@ -8,6 +8,7 @@ const PreviewEyeIcon = () => {
       height="20"
       fill="none"
       viewBox="0 0 20 20"
+      className="tablet:hidden"
     >
       <path
         fill="#633CFF"

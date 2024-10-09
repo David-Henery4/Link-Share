@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     screens: {
       lgMob: "29.6875em", // 475px
+      smallTablet: "36.25em", // 580px
       tablet: "46.25em", // 740px
     },
     fontFamily: {

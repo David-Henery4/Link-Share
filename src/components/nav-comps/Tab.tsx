@@ -9,7 +9,7 @@ const Tab = ({ label, isActive, children }: TabTypes) => {
   return (
     <button
       aria-label={label}
-      className={`px-7 py-3 rounded-lg group font-bold hover:text-purple ${
+      className={`px-7 py-3 rounded-lg group font-bold inline-flex justify-center items-center flex-row-reverse gap-2 hover:text-purple ${
         isActive ? "bg-purpleLight text-purple" : "text-grey"
       }`}
     >

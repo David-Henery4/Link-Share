@@ -8,6 +8,7 @@ const LogoSmall = () => {
       height="32"
       fill="none"
       viewBox="0 0 32 32"
+      className="tablet:hidden"
     >
       <path
         fill="#633CFF"

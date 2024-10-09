@@ -5,7 +5,7 @@ import { BaseText } from "./reusable/text";
 
 const LinksSection = () => {
   return (
-    <section className="w-full rounded-xl">
+    <section className="w-full p-6 lgMob:p-10">
       <HeaderSection
         description="Add/edit/remove links below and then share all your profiles with
             the world!"
@@ -15,7 +15,7 @@ const LinksSection = () => {
         <Button buttonType="secondary" size="large">
           + Add new link
         </Button>
-        <div className="w-full my-6 py-5 text-center grid gap-6">
+        <div className="w-full my-6 py-5 text-center grid gap-6 smallTablet:py-20">
           {/* Illustration Container 250px max-width on tablet & above */}
           <div className="w-full max-w-32 mx-auto">
             <IllustrationEmpty />

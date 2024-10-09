@@ -1,6 +1,6 @@
 import { NavLogo, Tab } from "./nav-comps";
 import Button from "./reusable/Button";
-import { LinksTabIcon, PreviewEyeIcon, ProfileDetailsHeaderIcon, LogoLarge, LogoSmall } from "./icons";
+import { LinksTabIcon, PreviewEyeIcon, ProfileDetailsHeaderIcon } from "./icons";
 
 
 const Navbar = () => {
@@ -17,6 +17,7 @@ const Navbar = () => {
       </div>
       <Button buttonType="secondary" size="secondarySmall">
         <PreviewEyeIcon />
+        <span className="text-base font-semibold hidden tablet:block">Preview</span>
       </Button>
     </nav>
   );
