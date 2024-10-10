@@ -2,33 +2,24 @@ import {
   Navbar,
   LinksSection,
   // ProfileSection,
-  // MobilePreviewContainer,
+  MobilePreviewSection,
+  SaveButton
 } from "@/components";
-import Button from "@/components/reusable/Button";
 
 export default function Home() {
   return (
-    <div className="w-full min-h-[100svh]">
+    <div className="w-full flex flex-col min-h-[100svh]">
       <Navbar />
-      <main className="w-full p-4 lgMob:p-6">
-        <div className="w-full rounded-xl bg-white">
+      <main className="w-full flex flex-row-reverse gap-6 flex-grow-[1] p-4 lgMob:p-6">
+        {/* Shadow is temp for development */}
+        <div className="w-full max-w-[800px] mx-auto flex-[2] rounded-xl bg-white shadow-2xl laptop:max-w-none laptop:m-0">
           <LinksSection />
           {/* <ProfileSection/> */}
-          <div className="w-full border-t border-border p-4 lgMob:py-6 lgMob:px-10 tablet:flex tablet:justify-end">
-            <Button
-              disabled={true} // temp obvs
-              buttonType="primary"
-              size="large"
-              className="tablet:w-auto target:ml-auto"
-            >
-              Save
-            </Button>
-          </div>
+          <SaveButton/>
         </div>
 
-        {/* <div className="w-full bg-white">
-        <MobilePreviewContainer/>
-        </div> */}
+        {/* Shadow is temp for development */}
+        <MobilePreviewSection/>
       </main>
     </div>
   );

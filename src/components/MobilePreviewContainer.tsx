@@ -1,8 +1,10 @@
-
+import { IllustrationPhoneMockup } from "./icons"
 
 const MobilePreviewContainer = () => {
   return (
-    <section>MobilePreviewContainer</section>
+    <section className="">
+      <IllustrationPhoneMockup/>
+    </section>
   )
 }
 
