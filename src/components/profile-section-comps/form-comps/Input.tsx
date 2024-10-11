@@ -1,12 +1,15 @@
-
-
-const Input = () => {
-  return (
-    <div>
-      <label htmlFor="imageFile"></label>
-      <input type="file" id="imageFile" accept="image/*" />;
-    </div>
-  );
+interface InputTypes {
+  id: string;
+  label: string;
 }
 
-export default Input
+const Input = ({ id, label }: InputTypes) => {
+  return (
+    <div>
+      <label htmlFor={id}>{label}</label>
+      <input type="text" id={id} name={id} />;
+    </div>
+  );
+};
+
+export default Input;
