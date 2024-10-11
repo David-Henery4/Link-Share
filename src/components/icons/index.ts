@@ -5,6 +5,7 @@ import IllustrationEmpty from "./IllustrationEmpty";
 import LogoLarge from "./LogoLarge";
 import LogoSmall from "./LogoSmall";
 import IllustrationPhoneMockup from "./IllustrationPhoneMockup";
+import UploadImageIcon from "./UploadImageIcon";
 
 export {
   LinksTabIcon,
@@ -13,5 +14,6 @@ export {
   IllustrationEmpty,
   LogoLarge,
   LogoSmall,
-  IllustrationPhoneMockup
+  IllustrationPhoneMockup,
+  UploadImageIcon
 }
