@@ -10,11 +10,15 @@ const config: Config = {
     screens: {
       lgMob: "29.6875em", // 475px
       smallTablet: "36.25em", // 580px
+      mediumTablet: "42.1875em", // 675px
       tablet: "46.25em", // 740px
       laptop: "66.25em", // 1060px
     },
     fontFamily: {
       instrumentSans: ["var(--font-instrument-sans)", "sans-serif"],
+    },
+    gridTemplateColumns: {
+      formColumns: "140px 1fr",
     },
     colors: {
       purple: "#633CFF",

@@ -14,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${instrumentSans.variable}`}>
-      <body className={`font-instrumentSans bg-lightGrey`}>{children}</body>
+      <body className={`font-instrumentSans bg-lightGrey`}>
+        {children}
+      </body>
     </html>
   );
 }

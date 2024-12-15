@@ -1,6 +1,6 @@
 import {
   Navbar,
-  // LinksSection,
+  LinksSection,
   ProfileSection,
   MobilePreviewSection,
   SaveButton
