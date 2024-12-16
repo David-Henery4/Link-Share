@@ -5,7 +5,7 @@ interface InputTypes {
 
 const Input = ({ id, label }: InputTypes) => {
   return (
-    <div className="w-full smallTablet:gap-10 smallTablet:grid smallTablet:grid-cols-formColumns">
+    <div className="w-full smallTablet:gap-10 smallTablet:grid smallTablet:grid-cols-formColumns lgLaptop:gap-20">
       <label
         className="text-xs text-darkGrey font-normal smallTablet:text-base smallTablet:text-grey smallTablet:inline-flex smallTablet:justify-start smallTablet:items-center"
         htmlFor={id}

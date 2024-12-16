@@ -13,6 +13,7 @@ const config: Config = {
       mediumTablet: "42.1875em", // 675px
       tablet: "46.25em", // 740px
       laptop: "66.25em", // 1060px
+      lgLaptop: "78.75em", // 1260px
     },
     fontFamily: {
       instrumentSans: ["var(--font-instrument-sans)", "sans-serif"],
@@ -31,7 +32,11 @@ const config: Config = {
       white: "#ffffff",
       red: "#FF3939",
     },
-    extend: {},
+    extend: {
+      maxWidth: {
+        maxBodyWidth: "1440px",
+      },
+    },
   },
   plugins: [],
 };

@@ -3,7 +3,7 @@ import { UploadImageIcon } from "../../icons";
 
 const ProfileImageUpload = () => {
   return (
-    <div className="w-full grid gap-4 p-5 bg-lightGrey rounded-xl smallTablet:gap-10 smallTablet:grid-cols-formColumns">
+    <div className="w-full grid gap-4 p-5 bg-lightGrey rounded-xl smallTablet:gap-10 smallTablet:grid-cols-formColumns lgLaptop:gap-20">
       <label htmlFor="imageFile" className="text-grey text-base font-normal tablet:inline-flex tablet:justify-start tablet:items-center">
         Profile Picture
       </label>

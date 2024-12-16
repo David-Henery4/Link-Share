@@ -3,7 +3,7 @@ import { cn } from "@/libs/utils";
 import { ButtonHTMLAttributes } from "react";
 
 interface ButtonTypes extends ButtonHTMLAttributes<HTMLButtonElement> {
-  buttonType: "primary" | "secondary";
+  buttonType: "primary" | "secondary" | "third";
   size?: "large" | "secondarySmall";
 }
 
@@ -23,6 +23,7 @@ const buttonVariants = cva(
       buttonType: {
         primary: "bg-purple text-white active:bg-purpleHover",
         secondary: "border border-purple text-purple active:bg-purpleLight",
+        third: "text-grey",
       },
       size: {
         large: "w-full",
