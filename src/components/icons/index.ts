@@ -6,6 +6,7 @@ import LogoLarge from "./LogoLarge";
 import LogoSmall from "./LogoSmall";
 import IllustrationPhoneMockup from "./IllustrationPhoneMockup";
 import UploadImageIcon from "./UploadImageIcon";
+import ChevIcon from "./ChevIcon";
 
 export {
   LinksTabIcon,
@@ -15,5 +16,6 @@ export {
   LogoLarge,
   LogoSmall,
   IllustrationPhoneMockup,
-  UploadImageIcon
+  UploadImageIcon,
+  ChevIcon,
 }
