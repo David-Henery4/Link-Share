@@ -5,6 +5,7 @@ import linkOptions from "@/local-data/linkOptions";
 import { useState } from "react";
 import { ActivePlatformInfo } from "@/types/types";
 import { SelectInput } from "./link-inputs";
+import { LinkIcon } from "@/components/icons";
 
 const LinkContainer = () => {
   const [activePlatform, setActivePlatform] = useState(linkOptions[0]);
@@ -33,16 +34,22 @@ const LinkContainer = () => {
       </div>
 
       <form className="w-full mt-3">
+
         <SelectInput
           activePlatform={activePlatform}
           handleSetActivePlatform={handleSetActivePlatform}
         />
 
-        <div className="">
+        <div className="w-full mt-3">
           <label htmlFor="link">Link</label>
-          <input type="text" name="link" id="link" />
+          <div className="w-full flex justify-start items-center gap-3 mt-1 px-4 py-3 rounded-lg border border-border hover:border-purple hover:shadow-basicPurple">
+            <LinkIcon/>
+            <input className="w-full outline-none" type="url" name="link" id="link" />
+          </div>
         </div>
+
       </form>
+
     </div>
   );
 };

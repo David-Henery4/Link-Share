@@ -36,6 +36,9 @@ const config: Config = {
       maxWidth: {
         maxBodyWidth: "1440px",
       },
+      boxShadow: {
+        basicPurple: "0 0 32px 0 rgb(99 60 255 / 0.25)",
+      },
     },
   },
   plugins: [],

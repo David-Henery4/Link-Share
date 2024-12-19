@@ -1,49 +1,76 @@
 import { ChevIcon } from "@/components/icons";
 import linkOptions from "@/local-data/linkOptions";
 import { SelectInputProps } from "@/types/types";
+import { MouseEvent, useState } from "react";
 
 const SelectInput = ({
   activePlatform,
   handleSetActivePlatform,
 }: SelectInputProps) => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  //
+  const handleButtonClick = (e: MouseEvent<HTMLButtonElement>) => {
+    setIsDropdownOpen(!isDropdownOpen);
+    e.preventDefault();
+  };
+  //
   return (
     <div className="relative w-full mt-1 flex flex-col">
+      <div className="w-full">
+        <p>Platform</p>
 
-      <label htmlFor="platform">Platform</label>
-      <div className="group relative w-full">
-        <span className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
-          {<activePlatform.icon />}
-        </span>
-        <p className="absolute left-11 top-1/2 -translate-y-1/2 pointer-events-none">
-          {activePlatform.label}
-        </p>
-        <input
-          className="w-full z-10 px-4 py-3 rounded-lg border border-border hover:cursor-pointer group-hover:border-purple"
-          id="platform"
-          name="platform"
-          type="text"
-        />
-        <span className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
-          <ChevIcon />
-        </span>
+        {/* Select Dropdown Toggle */}
+        <button
+          className="group relative w-full inline-flex justify-between items-center gap-3 mt-1 px-4 py-3 rounded-lg border border-border outline-none hover:cursor-pointer hover:border-purple hover:shadow-basicPurple"
+          onClick={handleButtonClick}
+        >
+          <span className="">{<activePlatform.icon />}</span>
+          <p className="mr-auto group-hover:text-purple">
+            {activePlatform.label}
+          </p>
+          <span className="">
+            <ChevIcon />
+          </span>
+        </button>
       </div>
 
       {/* Dropdown Options */}
-      <div className="absolute h-[200%] overflow-auto top-[110%] left-0 z-10 w-full px-4 rounded-lg border border-border bg-white">
+      <ul
+        className={`absolute h-[200%] overflow-auto top-[110%] left-0 z-10 w-full px-4 rounded-lg border border-border bg-white ${
+          isDropdownOpen ? "block" : "hidden"
+        }`}
+      >
         {linkOptions.map((option) => {
           return (
-            <div
-              className="group flex justify-start items-center py-3 gap-3 border-b border-border hover:cursor-pointer fill-purple"
+            <li
+              className="relative group flex justify-start items-center py-3 gap-3 border-b border-border fill-purple"
               key={option?.id}
-              onClick={() => handleSetActivePlatform(option)}
+              onClick={() => {
+                setIsDropdownOpen(!isDropdownOpen);
+                handleSetActivePlatform(option);
+              }}
             >
-              {option && <option.icon />}
-              <p className="group-hover:text-purple">{option?.label}</p>
-            </div>
+              <span>
+                <option.icon />
+              </span>
+              <input
+                defaultChecked={option.value === activePlatform.value}
+                className="w-full h-full absolute top-0 left-0 opacity-0 hover:cursor-pointer"
+                type="radio"
+                name="platform"
+                id={`${option.value}-${option.id}`}
+                value={option.value}
+              />
+              <label
+                htmlFor={`${option.value}-${option.id}`}
+                className="pointer-events-none group-hover:text-purple"
+              >
+                {option?.label}
+              </label>
+            </li>
           );
         })}
-      </div>
-
+      </ul>
     </div>
   );
 };

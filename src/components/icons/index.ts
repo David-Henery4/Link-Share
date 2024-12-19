@@ -7,6 +7,7 @@ import LogoSmall from "./LogoSmall";
 import IllustrationPhoneMockup from "./IllustrationPhoneMockup";
 import UploadImageIcon from "./UploadImageIcon";
 import ChevIcon from "./ChevIcon";
+import LinkIcon from "./LinkIcon";
 
 export {
   LinksTabIcon,
@@ -18,4 +19,5 @@ export {
   IllustrationPhoneMockup,
   UploadImageIcon,
   ChevIcon,
+  LinkIcon,
 }
