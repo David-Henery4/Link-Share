@@ -1,6 +1,5 @@
-import Button from "./reusable/Button";
 import HeaderSection from "./reusable/HeaderSection";
-import { EmptyContainer,LinksList } from "./link-section-comps";
+import { LinksContainer } from "./link-section-comps";
 
 
 const LinksSection = () => {
@@ -11,13 +10,7 @@ const LinksSection = () => {
             the world!"
         title="Customize your links"
       />
-      <div className="w-full mt-10">
-        <Button buttonType="secondary" size="large">
-          + Add new link
-        </Button>
-        {/* <EmptyContainer/> */}
-        <LinksList/>
-      </div>
+      <LinksContainer/>
     </section>
   );
 };

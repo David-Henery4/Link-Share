@@ -1,3 +1,11 @@
+
+export interface LinksInfo {
+  id: string;
+  platform: string;
+  url: string;
+}
+
+
 export interface ActivePlatformInfo {
   id: number;
   label: string;

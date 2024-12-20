@@ -1,7 +1,4 @@
-import EmptyContainer from "./EmptyContainer";
-import LinksList from "./LinksList";
 
-export {
-  EmptyContainer,
-  LinksList,
-}
+import LinksContainer from "./LinksContainer";
+
+export {  LinksContainer };

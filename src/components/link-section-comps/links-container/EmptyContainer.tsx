@@ -1,5 +1,5 @@
-import { IllustrationEmpty } from "../icons"
-import { BaseText } from "../reusable/text"
+import { IllustrationEmpty } from "@/components/icons";
+import { BaseText } from "@/components/reusable/text";
 
 const EmptyContainer = () => {
   return (
