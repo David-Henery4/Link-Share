@@ -1,28 +1,30 @@
 import LinkContainer from "./links/LinkContainer";
 import { LinksInfo } from "@/types/types";
+import { ActivePlatformInfo } from "@/types/types";
 
 interface LinksListProps {
   currentLinksList: LinksInfo[];
-  defaultPlatformIndex: number;
-  updateUrlString: (linkId: string, newUrlValue: string) => void;
+  updateLinkValues: (
+    linkId: string,
+    valueName: "platform" | "url",
+    newValue: string | ActivePlatformInfo
+  ) => void;
   handleRemoveLink: (id: string) => void;
 }
 
 const LinksList = ({
   currentLinksList,
-  defaultPlatformIndex,
-  updateUrlString,
-  handleRemoveLink
+  handleRemoveLink,
+  updateLinkValues
 }: LinksListProps) => {
   return (
-    <div className="w-full my-6">
+    <div className="w-full my-6 flex flex-col justify-center items-center gap-6">
       {currentLinksList.map((linkInformation, i) => {
         return (
           <LinkContainer
             key={i}
             handleRemoveLink={handleRemoveLink}
-            defaultPlatformIndex={defaultPlatformIndex}
-            updateUrlString={updateUrlString}
+            updateLinkValues={updateLinkValues}
             linkIndex={i}
             {...linkInformation}
           />

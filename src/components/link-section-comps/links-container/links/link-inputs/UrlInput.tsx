@@ -3,10 +3,14 @@ import { LinkIcon } from "@/components/icons";
 interface UrlInputProps {
   id: string;
   url: string;
-  updateUrlString: (linkId: string, newUrlValue: string) => void;
+  updateLinkValues: (
+    linkId: string,
+    valueName: "platform" | "url",
+    newValue: string
+  ) => void;
 }
 
-const UrlInput = ({ updateUrlString, url, id }: UrlInputProps) => {
+const UrlInput = ({ url, id, updateLinkValues }: UrlInputProps) => {
   return (
     <div className="w-full mt-3">
       <label htmlFor="link">Link</label>
@@ -14,7 +18,7 @@ const UrlInput = ({ updateUrlString, url, id }: UrlInputProps) => {
         <LinkIcon />
         <input
           onChange={(e) => {
-            updateUrlString(id, e.target.value)
+            updateLinkValues(id, "url", e.target.value);
           }}
           value={url}
           className="w-full outline-none bg-lightGrey/0"

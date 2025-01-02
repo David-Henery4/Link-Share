@@ -1,33 +1,28 @@
 "use client";
 import DragAndDropIcon from "../../../icons/DragAndDropIcon";
 import Button from "../../../reusable/Button";
-import linkOptions from "@/local-data/linkOptions";
-import { useState } from "react";
 import { ActivePlatformInfo } from "@/types/types";
 import { SelectInput, UrlInput } from "./link-inputs";
 import { LinksInfo } from "@/types/types";
 
 interface LinkContainerProps extends LinksInfo {
-  defaultPlatformIndex: number;
   linkIndex: number;
-  updateUrlString: (linkId: string, newUrlValue: string) => void;
+  updateLinkValues: (
+    linkId: string,
+    valueName: "platform" | "url",
+    newValue: string | ActivePlatformInfo
+  ) => void;
   handleRemoveLink: (id: string) => void;
 }
 
 const LinkContainer = ({
   linkIndex,
-  defaultPlatformIndex,
-  updateUrlString,
   url,
   id,
-  handleRemoveLink
+  platform,
+  handleRemoveLink,
+  updateLinkValues,
 }: LinkContainerProps) => {
-  const [activePlatform, setActivePlatform] = useState(
-    linkOptions[defaultPlatformIndex]
-  );
-  //
-  const handleSetActivePlatform = (activeOption: ActivePlatformInfo) =>
-    setActivePlatform(activeOption);
   //
   return (
     <div className="w-full p-5 rounded-xl bg-lightGrey">
@@ -43,7 +38,9 @@ const LinkContainer = ({
           <Button
             buttonType="third"
             className="font-medium p-0 hover:text-darkGrey"
-            onClick={() => handleRemoveLink(id)}
+            onClick={() => {
+              handleRemoveLink(id);
+            }}
           >
             Remove
           </Button>
@@ -52,11 +49,16 @@ const LinkContainer = ({
 
       <form className="w-full mt-3">
         <SelectInput
-          activePlatform={activePlatform}
-          handleSetActivePlatform={handleSetActivePlatform}
+          activePlatform={platform}
+          updateLinkValues={updateLinkValues}
+          id={id}
         />
 
-        <UrlInput updateUrlString={updateUrlString} url={url} id={id} />
+        <UrlInput
+          updateLinkValues={updateLinkValues}
+          url={url}
+          id={id}
+        />
       </form>
     </div>
   );

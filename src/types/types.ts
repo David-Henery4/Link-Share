@@ -1,11 +1,3 @@
-
-export interface LinksInfo {
-  id: string;
-  platform: string;
-  url: string;
-}
-
-
 export interface ActivePlatformInfo {
   id: number;
   label: string;
@@ -14,7 +6,18 @@ export interface ActivePlatformInfo {
   color: string;
 }
 
+export interface LinksInfo {
+  id: string;
+  platform: ActivePlatformInfo;
+  url: string;
+}
+
 export interface SelectInputProps {
   activePlatform: ActivePlatformInfo;
-  handleSetActivePlatform: (activeOption: ActivePlatformInfo) => void;
+  updateLinkValues: (
+    linkId: string,
+    valueName: "platform" | "url",
+    newValue: string | ActivePlatformInfo
+  ) => void;
+  id: string;
 }

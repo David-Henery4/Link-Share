@@ -2,16 +2,23 @@ import { ChevIcon } from "@/components/icons";
 import linkOptions from "@/local-data/linkOptions";
 import { SelectInputProps } from "@/types/types";
 import { MouseEvent, useState } from "react";
+import { ActivePlatformInfo } from "@/types/types";
 
 const SelectInput = ({
   activePlatform,
-  handleSetActivePlatform,
+  updateLinkValues,
+  id
 }: SelectInputProps) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   //
   const handleButtonClick = (e: MouseEvent<HTMLButtonElement>) => {
     setIsDropdownOpen(!isDropdownOpen);
     e.preventDefault();
+  };
+  //
+  const handleSelectItemClick = (option: ActivePlatformInfo) => {
+    setIsDropdownOpen(!isDropdownOpen);
+    updateLinkValues(id, "platform", option);
   };
   //
   return (
@@ -45,10 +52,7 @@ const SelectInput = ({
             <li
               className="relative group flex justify-start items-center py-3 gap-3 border-b border-border fill-purple"
               key={option?.id}
-              onClick={() => {
-                setIsDropdownOpen(!isDropdownOpen);
-                handleSetActivePlatform(option);
-              }}
+              onClick={() => handleSelectItemClick(option)}
             >
               <span>
                 <option.icon />
