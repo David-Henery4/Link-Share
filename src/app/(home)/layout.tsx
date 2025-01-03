@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { instrumentSans } from "./fonts/fonts";
-import "./globals.css";
+import { instrumentSans } from "../fonts/fonts";
+import "../globals.css";
 import { MobilePreviewSection, Navbar } from "@/components";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
           <Navbar />
           <main className="w-full flex flex-row-reverse gap-6 flex-grow-[1] p-4 lgMob:p-6">
             {children}
-            <MobilePreviewSection/>
+            <MobilePreviewSection />
           </main>
         </div>
       </body>

@@ -12,7 +12,7 @@ const Navbar = () => {
           <Tab label="links" path="/" />
           <Tab label="profile details" path="/profile-details" />
         </div>
-        <Button buttonType="secondary" size="secondarySmall">
+        <Button buttonType="secondary" size="secondarySmall" isLink={true} href="/preview">
           <PreviewEyeIcon />
           <span className="text-base font-semibold hidden tablet:block">
             Preview
